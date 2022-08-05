@@ -2,6 +2,7 @@ package kz.assel.practice.dao;
 
 import kz.assel.practice.model.Book;
 import kz.assel.practice.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ public class BookDao {
 
     private final JdbcTemplate jdbcTemplate;
 
+    @Autowired
     public BookDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
